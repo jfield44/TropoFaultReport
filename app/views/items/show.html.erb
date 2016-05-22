@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item type:</strong>
+  <%= @item.item_type %>
+</p>
+
+<p>
+  <strong>Item identifier:</strong>
+  <%= @item.item_identifier %>
+</p>
+
+<p>
+  <strong>Item latitude:</strong>
+  <%= @item.item_latitude %>
+</p>
+
+<p>
+  <strong>Item longitude:</strong>
+  <%= @item.item_longitude %>
+</p>
+
+<p>
+  <strong>Item location:</strong>
+  <%= @item.item_location %>
+</p>
+
+<p>
+  <strong>Item repair time:</strong>
+  <%= @item.item_repair_time %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

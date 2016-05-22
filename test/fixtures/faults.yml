@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fault_type: MyString
+  fault_description: MyString
+  fault_reported_by: MyString
+  item_id: 
+
+two:
+  fault_type: MyString
+  fault_description: MyString
+  fault_reported_by: MyString
+  item_id: 

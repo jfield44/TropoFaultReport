@@ -1,0 +1,49 @@
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">List of Bins and Street Lamps</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+  </section>
+</nav>
+
+<p id="notice"><%= notice %></p>
+
+<table align="center">
+  <thead>
+    <tr>
+      <th>Item Type</th>
+      <th>Item Identifier</th>
+      <th>Item Latitude</th>
+      <th>Item Longitude</th>
+      <th>Item Location</th>
+      <th>Item Repair Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.item_type %></td>
+        <td><%= item.item_identifier %></td>
+        <td><%= item.item_latitude %></td>
+        <td><%= item.item_longitude %></td>
+        <td><%= item.item_location %></td>
+        <td><%= item.item_repair_time %></td>
+        <td><%= link_to 'Show', item %></td>
+        <td><%= link_to 'Edit', edit_item_path(item) %></td>
+        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<h5><center><%= link_to 'New Item', new_item_path, {:class => "button radius", style: "color: white"} %></center></h5>

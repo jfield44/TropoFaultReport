@@ -1,0 +1,65 @@
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">Fault ID: <%= @fault.id %></a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+  </section>
+</nav>
+<p>
+
+</p>
+<% if flash[:notice] %>
+  <div class="alert alert-success">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<table class="scroll" align="center">
+  <thead>
+    <tr>
+      <th>Faulty Item</th>
+      <th>Identifier</th>
+      <th>Fault Location</th>
+      <th>Fault Type</th>
+      <th>Fault Reported By</th>
+      <th>Fault Reported At</th>
+      <th>Fault Status</th>
+      <th>Case Notes</th>
+      <th>Fault Resolved At</th>
+      <th>Dispatch Engineering Team</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @fault.item.item_type %></td>
+      <td><%= @fault.item.item_identifier %></td>
+      <td><%= @fault.item.item_location %></td>
+      <td><%= @fault.fault_type %></td>
+      <td><%= @fault.fault_reported_by %></td>
+      <td><%= @fault.created_at %></td>
+      <td><%= @fault.fault_status %></td>
+      <td><%= @fault.case_note %></td>
+      <td><%= @fault.resolved_at %></td>
+      <td><strong><%= link_to 'Dispatch Engineering Team', dispatch_engineering_team_fault_path(@fault), { id: 'dispatch' }%></strong></td>
+    </tr>
+</table>
+
+<div id="map"></div>
+<center><%= link_to 'Edit', edit_fault_path(@fault), {:class => "button radius", style: "color: white"} %> </center>
+<center><%= link_to 'Back', faults_path, {:class => "button radius", style: "color: white"} %></center>
+
+<script>
+  $('#dispatch').on('click', function(e){
+    e.preventDefault()
+
+    var url = $(this).attr('href')
+    var email = prompt('Enter the Email Address of the Engineer')
+
+    window.location = url + '?email=' + email
+  })
+</script>

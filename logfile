@@ -1,0 +1,15 @@
+LOG:  database system was shut down at 2016-03-31 19:55:02 BST
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "TropoFaultReport_development" does not exist
+ERROR:  insert or update on table "faults" violates foreign key constraint "fk_rails_9a506eedf6"
+DETAIL:  Key (item_id)=(0) is not present in table "items".
+STATEMENT:  INSERT INTO "faults" ("fault_type", "fault_description", "fault_reported_by", "item_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+ERROR:  insert or update on table "faults" violates foreign key constraint "fk_rails_9a506eedf6"
+DETAIL:  Key (item_id)=(23) is not present in table "items".
+STATEMENT:  INSERT INTO "faults" ("fault_type", "fault_description", "fault_reported_by", "item_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down

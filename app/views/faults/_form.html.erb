@@ -1,0 +1,33 @@
+<%= form_for(@fault) do |f| %>
+  <% if @fault.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fault.errors.count, "error") %> prohibited this fault from being saved:</h2>
+
+      <ul>
+      <% @fault.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fault_type %><br>
+    <%= f.text_field :fault_type %>
+  </div>
+  <div class="field">
+    <%= f.label :fault_description %><br>
+    <%= f.text_field :fault_description %>
+  </div>
+  <div class="field">
+    <%= f.label :fault_reported_by %><br>
+    <%= f.text_field :fault_reported_by %>
+  </div>
+  <div class="field">
+    <%= f.label :item_id %><br>
+    <%= f.text_field :item_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

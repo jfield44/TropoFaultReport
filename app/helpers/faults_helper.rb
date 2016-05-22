@@ -1,0 +1,2 @@
+module FaultsHelper
+end

@@ -1,0 +1,53 @@
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">Tropo Fault Report</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+  </section>
+</nav>
+</br>
+</br>
+<center><h2>Simple Fault Reporting with Tropo</h2></center>
+</br>
+<center><a href="https://tropofaultreport.herokuapp.com/tfr.png"><img src="/tfr.png" width="470px" height="291px"></a></center>
+</br>
+</br>
+<center><h5><b>Step 1:</b> Call the phone number in the image above.</h5></center>
+</br>
+<center><h5><b>Step 2:</b> At the prompt enter the Steet Light Identifier (4032.)</h5></center>
+</br>
+<center><h5><b>Step 3:</b> Follow the next prompt and choose the number that describes the issue.</h5></center>
+<center><h7>At this point a Fault will be created an sent via Tropo to our Customer Relationship Tool (see below).</h7></center>
+</br>
+</br>
+</br>
+<center><h2>Fault Resolution and Management Using Spark</h2></center>
+<center><h5><b>Step 4:</b> Open the Customer Relationship Management Portal <%= link_to "here.", '/faults', :method => :get %></h5></center>
+</br>
+<center><h5><b>Step 5:</b> Locate the Fault that you just reported and press 'Show'.</h5></center>
+</br>
+<center><h5><b>Step 6:</b> Press 'Dispatch Engineering Team' and enter your Spark account email address when prompted.</h5></center>
+</br>
+<center><h5><b>Step 7:</b> Then open Spark to see the new room has been created.</h5></center>
+</br>
+<center><h5><b>Step 8:</b> Send an SMS to the requestor using /sms as below.<content></h5></center>
+<center><h7>Usage: /sms phone_number message</h7></center>
+<center><a href="https://tropofaultreport.herokuapp.com/sms.png"><img src="/sms.png" width="589px" height="290px"></a></center>
+</br>
+</br>
+</br>
+<center><h5><b>Step 9:</b> Close the case using /fault as below.<content></h5></center>
+<center><h7>Usage: /fault fault_number resolved closing_comments</h7></center>
+<center><a href="https://tropofaultreport.herokuapp.com/fault.png"><img src="/fault.png" width="552px" height="255px"></a></center>
+</br>
+</br>
+</br>
+<center><h5><b>Step 10:</b> Switch back to the Customer Relationship Management Tool and see the status is updated like below.<content>.</h5></center>
+<center><a href="https://tropofaultreport.herokuapp.com/faultstatus.png"><img src="/faultstatus.png" width="514px" height="150px"></a></center>
+</br>

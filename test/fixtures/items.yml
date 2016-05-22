@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_type: MyString
+  item_identifier: MyString
+  item_latitude: MyString
+  item_longitude: MyString
+  item_location: MyString
+  item_repair_time: MyString
+
+two:
+  item_type: MyString
+  item_identifier: MyString
+  item_latitude: MyString
+  item_longitude: MyString
+  item_location: MyString
+  item_repair_time: MyString

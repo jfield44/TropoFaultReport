@@ -1,0 +1,18 @@
+== README
+
+#Spark/Tropo Integration Server
+The first step is to install your own Spark/Tropo Integration Server, instructions can be found here.
+
+#Tropo Fault Reporting Server
+Create a Spark Account to use for the demo
+Get the API key from developer.ciscospark.com and add it to /config/initializers/cisco_spark.rb
+On Line 65 enter the path of your web server to complete the Webhook URL
+On Line 66 enter the path of your Tropo/Spark Integration web server to complete the Webhook URL.
+On 68 of Faults_Controller add the email address of your Tropo/Spark Integration Bot
+Bundle Install and Deploy
+
+#Tropo Script
+Find the file tropofaultreport.rb in this file structure
+Create a new application on Tropo.com
+Paste in the contents of tropofaultreport.rb into that script and assign a phone number
+Add your web server URL at lines 17 and 43 of the Tropo Script
