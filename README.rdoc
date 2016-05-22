@@ -29,3 +29,12 @@ Create a new application on Tropo.com
 Paste in the contents of tropofaultreport.rb into that script and assign a phone number
 
 Add your web server URL at lines 17 and 43 of the Tropo Script
+
+
+# Installation
+
+bundle install
+
+rake db:create
+
+rake db:migrate
