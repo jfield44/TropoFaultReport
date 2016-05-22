@@ -4,7 +4,7 @@ Ruby on Rails 4.x > Ruby 2.0 >
 
 #Spark/Tropo Integration Server
 
-The first step is to install your own Spark/Tropo Integration Server, instructions can be found here.
+The first step is to install your own Spark/Tropo Integration Server, instructions can be found here. (https://github.com/jfield44/TropoSparkIntegration)
 
 #Tropo Fault Reporting Server
 
